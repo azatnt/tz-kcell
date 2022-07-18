@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "76cd9301-6720-4d69-aa8c-8bc638d8a209",
+		"name": "Self",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11395732"
+	},
+	"item": [
+		{
+			"name": "Kcell",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"asikn\",\n    \"password\": \"Asik12345\",\n    \"password2\": \"Asik12345\",\n    \"email\": \"asikn10@mail.ru\",\n    \"first_name\": \"Aslanbek\",\n    \"last_name\": \"Nurmakhambetov\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8001/auth/register/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"asikn\",\n    \"password\": \"Asik12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8001/auth/login/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MTcxMjE1LCJpYXQiOjE2NTgxNzA5MTUsImp0aSI6IjY0ZDI4NzRlNmZhYTRiYmFhMzYyOTBjM2Y5ODI0NTFlIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhc2lrbiJ9.eQoc-5TDcO5qFAolKTYOPsshXa0n6xYR4XP8ggaFGK0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instagram\": \"https://www.instagram.com/asikn10/\",\n    \"telegram\": \"https://www.telegram.com/jibka/\",\n    \"phone\": \"87477674747\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8001/add-contact/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"add-contact",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-contact-by-user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MTcxMjE1LCJpYXQiOjE2NTgxNzA5MTUsImp0aSI6IjY0ZDI4NzRlNmZhYTRiYmFhMzYyOTBjM2Y5ODI0NTFlIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhc2lrbiJ9.eQoc-5TDcO5qFAolKTYOPsshXa0n6xYR4XP8ggaFGK0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8001/get-contact-by-user/1/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"get-contact-by-user",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-users-and-contacts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MTcxMjE1LCJpYXQiOjE2NTgxNzA5MTUsImp0aSI6IjY0ZDI4NzRlNmZhYTRiYmFhMzYyOTBjM2Y5ODI0NTFlIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhc2lrbiJ9.eQoc-5TDcO5qFAolKTYOPsshXa0n6xYR4XP8ggaFGK0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8001/get-all-contacts/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"get-all-contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export-contacts-excel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MTcxMjE1LCJpYXQiOjE2NTgxNzA5MTUsImp0aSI6IjY0ZDI4NzRlNmZhYTRiYmFhMzYyOTBjM2Y5ODI0NTFlIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhc2lrbiJ9.eQoc-5TDcO5qFAolKTYOPsshXa0n6xYR4XP8ggaFGK0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "127.0.0.1:8001/export_excel_contacts/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"export_excel_contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
